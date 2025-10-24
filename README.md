@@ -25,6 +25,14 @@ A Dockerfile is a text file that contains a series of instructions used to build
 8) Command (CMD) - Provides a default command to run when the container starts. Eg: CMD ["python","app.py"]
 9) Volume (VOLUME) - Created a mount point with a specified path and marks it as holding externally mounted volumes from the host or the pther containers. Eg: VOLUME ['/data']
 
+Order of Components to define while creating the Dockerfile:
+1) Base Image  
+2) Working Dir  
+3) Copy  
+4) Run  
+5) Port  
+6) Command  
+
 # what is Docker Container?
 
 A Docker container is a lightweight, portable and isolated environment that encapsukates an application and its dependencies, allowing it to run consistency across different computing environments. Containers are created from Docker images, which are immutable and contain all the necessary components for the application to run.  
