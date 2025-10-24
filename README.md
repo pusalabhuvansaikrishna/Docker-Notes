@@ -32,4 +32,3 @@ A Docker container is a lightweight, portable and isolated environment that enca
 # What is Docker Registry?
 
 A Docker Registry is a service that stores and distributes Docker Images.  
-
