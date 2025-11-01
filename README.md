@@ -80,8 +80,30 @@ Three Types of Networks in Docker
 22) docker network ls -> lists the Networks in docker
 23) docker run --name < name > -p < Hostport : Containerport > < image > -> this will create and run the docker container and route the traffic from outside to 8080 port of Hostmachine to 80 port of container
 24) docker inspect network < network type >
-25) docker run -d --name < containername > --net < networktype > < imagename > -> By default when container created will be a prt of the bridge network (Which means, it will be a part of the default vnet that docker engine uses internally), other than that if you want to try another kind of networking, this is the command.  
+25) docker run -d --name < containername > --net < networktype > < imagename > -> By default when container created will be a prt of the bridge network (Which means, it will be a part of the default vnet that docker engine uses internally), other than that if you want to try another kind of networking, this is the command.
+26) docker build -t <imagename> . -  will build the docker image from the dockerfile
+27) docker volumne ls -> Lists the volumes which are used by Dockerimage
+28) docker volume rm <volumeid> - Will delete the mentioned volumne
+29) docker prune -  will delete the unattached/ unused volumes in docker
+30) docker volume create < volumename > - will create a new volume of name volumename
+31) docker run -it --name < container name > --mount source=< volumne name >,destination= <path inside the Container> <imagename> -> This will create the container and mount specific path to the container.
+32) docker run -it --volumes-from <source machine> --name < new container name > < imagename > bash -> This will create the container with the already attached volume.  
 
+# Dockerfile Commands
+
+1) **FROM** - Defines the base image used to start the build process  
+2) **ADD** - Copies the files from a source on the host into the containers own filesystem at the set destination  
+3) **COPY** - Copies the files from a source on the host into the containers own filesystem at the set destination
+4) **CMD** - can be used for executing a specific command within the container
+5) **ENTRYPOINT** - Sets a default applicaton to be used every time a container is created with the image
+6) **ENV** - Sets Environment Variables
+7) **EXPOSE** - Associates a specific port to enable networking between the container and to the outside
+8) **MAINTAINER** - Defines a full name and EamilAddress of the Image Creator
+9) **RUN** - Is the Central Executing directive for Dockerfiles
+10) **USER** - Sets the UID which is to run the ccontainer
+11) **VOLUME** - Is  used to enable access from the container to a durectory on the host machine
+12) **WORKDIR** - Sets the path where the command, defined with CMD, is to be executed
+13) **LABEL** - Allows you to add a label to your docker image  
 
 This Information is gathered/Learnt from the following:
 
